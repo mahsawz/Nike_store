@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nike</title>
+</head>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container1 {
+        width: 75%;
+        margin: 5em auto;
+    }
+
+    .box {
+        background-color: #ffffff;
+        padding: 5%;
+        border-radius: 20%;
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 17rem;
+    }
+
+    .btn {
+        margin-left: 110px;
+        margin-right: 150px;
+        margin-top: 80px;
+        color: white;
+        background-color: green;
+    }
+
+    .p {
+        font-size: 30px;
+        color: black;
+        margin-top: -180px;
+        margin-left: 260px;
+    }
+
+    .back {
+        padding: 30px;
+        background-color: #222222;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .counter {
+        margin-top: 50px;
+    }
+
+    .btn1 {
+        border: none;
+        outline: none;
+        padding: 17px;
+        border-radius: 20%;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .btn1:hover {
+        background-color: #ddd;
+    }
+
+    .btn1.active {
+        background-color: #666;
+        color: white;
+    }
+
+    .column {
+        float: left;
+        display: none;
+    }
+
+    body {
+        background-color: black;
+
+    }
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    .headding {
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 66px;
+        font-weight: 300;
+    }
+
+    .icons {
+        text-align: center;
+        max-width: 500px;
+        max-height: 300px;
+    }
+
+    span {
+        border: 1px solid;
+        border-radius: 50%;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 15px;
+        margin: 10px;
+        -webkit-transition: all .5s ease 0s;
+        -moz-transition: all .5s ease 0s;
+        -o-transition: all .5s ease 0s;
+        transition: all .5s ease 0s;
+    }
+
+    span:hover {
+        background: rgba(10, 10, 10, 0.1);
+        border-color: rgba(10, 10, 10, 0.1);
+    }
+
+    h6 a,
+    h6 a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+</style>
+
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"> Nike </a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="product.html">Products</a></li>
+            <li><a href="page2.html">About us</a></li>
+            <li><a href="portal.html"><b>Buy</b></a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Search bar -->
+<div class="container">
+
+    <h1 style="color: white">Search</h1>
+    <br>
+
+    <div id="myBtnContainer" style="margin-top: -1rem;">
+        <button class="btn1 active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn1" onclick="filterSelection('sport')"> Sport</button>
+        <button class="btn1" onclick="filterSelection('women')"> Women</button>
+        <button class="btn1" onclick="filterSelection('men')"> Men</button>
+    </div>
+
+    <hr>
+    <!-- row1 -->
+    <div class="row">
+        <div class="column men">
+            <div class="box">
+                <img src="img/sh9.jpg" alt="men">
+                <h3 style="margin-left: 16rem;margin-top: -3rem;"><b>Sport</b></h3>
+                <p style="margin-left: 16rem;margin-top: -6rem; font-size: 30px">$66</p>
+                <button class="btn"> Add to card</button>
+            </div>
+        </div>
+        <div class="column men">
+            <div class="box">
+                <img src="img/sh4.jpg" alt="sport">
+                <h3 style="margin-left: 16rem;margin-top: -3rem;"><b>Sport</b></h3>
+                <p style="margin-left: 16rem;margin-top: -6rem; font-size: 30px">$99</p>
+                <button class="btn"> Add to card</button>
+            </div>
+        </div>
+        <div class="column men">
+            <div class="box">
+                <img src="img/sh6.jpg" alt="men">
+                <h3 style="margin-left: 16rem;margin-top: -1rem;"><b>Men</b></h3>
+                <p style="margin-left: 16rem;margin-top: -9rem; font-size: 30px"><s style="color: red">$210</s></p>
+                <p style="margin-left: 16rem;margin-top: -1rem; font-size: 30px">$190</p>
+                <button class="btn" style="margin-top: 50px"> Add to card</button>
+            </div>
+        </div>
+    </div>
+    <!-- row2 -->
+    <div class="row">
+        <div class="column sport">
+            <div class="box">
+                <img src="img/sh8.jpg" alt="sport">
+                <h3 style="margin-left: 16rem;margin-top: -3rem;"><b>Sport</b></h3>
+                <p style="margin-left: 16rem;margin-top: -6rem; font-size: 30px">$59</p>
+                <button class="btn"> Add to card</button>
+            </div>
+        </div>
+        <div class="column sport">
+            <div class="box">
+                <img src="img/sh5.jpg" alt="sport">
+                <h3 style="margin-left: 16rem;margin-top: -1rem;"><b>Men</b></h3>
+                <p style="margin-left: 16rem;margin-top: -9rem; font-size: 30px"><s style="color: red">$79</s></p>
+                <p style="margin-left: 16rem;margin-top: -1rem; font-size: 30px">$69</p>
+                <button class="btn" style="margin-top: 50px"> Add to card</button>
+            </div>
+        </div>
+        <div class="column women">
+            <div class="box">
+                <img src="img/sh0.jpg" alt="women">
+                <h3 style="margin-left: 16rem;margin-top: -3rem;"><b>Women</b></h3>
+                <p style="margin-left: 16rem;margin-top: -6rem; font-size: 30px">$33</p>
+                <button class="btn"> Add to card</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- page counter -->
+<div class="w3-center w3-padding-32">
+    <div class="w3-bar counter" style="color: #666666;">
+        <a href="product.html" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button">2</a>
+        <a href="Page2.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">5</a>
+        <a href="Page2.html" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+</div>
+
+<!-- about us -->
+<div class="w3-padding-32 w3-center back">
+    <h1 style="color: #666666">About us</h1>
+    <div class="w3-padding-32">
+        <p class="font" style="color: white">
+            The company was founded on January 25, 1964, as Blue Ribbon Sports, by Bill Bowerman and Phil Knight,
+            and officially became Nike, Inc. on May 30, 1971. The company takes its name from Nike,
+            the Greek goddess of victory. Nike markets its products under its own brand, as well as Nike Golf,
+            Nike Pro, Nike+, Air Jordan, Nike Blazers, Air Force 1, Nike Dunk, Air Max, Foamposite,
+            Nike Skateboarding, Nike CR7, and subsidiaries including Brand Jordan, Hurley International and Converse.
+            Nike also owned Bauer Hockey (later renamed Nike Bauer) from 1995 and 2008, and previously owned Cole Haan
+            and Umbro.
+            Nike sponsors many high-profile athletes and sports teams around the world, with the highly recognized
+            trademarks of "Just Do It" and
+            the Swoosh logo.
+        </p>
+    </div>
+
+    <!-- social media -->
+    <div class="icons center-block"><span class="fa fa-facebook fa-2x"></span>
+        <span class="fa fa-twitter fa-2x"></span>
+        <span class="fa fa-instagram fa-2x"></span>
+        <span class="fa fa-whatsapp fa-2x"></span>
+        <span class="fa fa-skype fa-2x"></span>
+        <br>
+        <h6>Thanks for checking this page<br><br><a href="http://www.nike.com" title="See More">www.nike.com</a></h6>
+        <br>
+    </div>
+</div>
+
+<!-- script search -->
+<script>
+    filterSelection("all")
+
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+    }
+
+    function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn1");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+</body>
+</html>
